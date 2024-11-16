@@ -1,0 +1,2 @@
+class PokemonStatusProtocol:
+    pass

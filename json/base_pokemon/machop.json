@@ -1,0 +1,70 @@
+{
+    "id": 66,
+    "name": "machop",
+    "pokemon_type": "fighting",
+    "exp_to_level": 100,
+    "max_hp": 70,
+    "defence": 2,
+    "special_defence": 2,
+    "evolves_to_id": 67,
+    "evolved_from_id": null,
+    "ability_slots": 2,
+    "new_abilities": [
+        {
+            "id": 0,
+            "ability_sub_type": "direct_damage",
+            "name": "Karate Chop",
+            "description": "Deals 15 physical damage of type fighting to the targeted Pokemon.",
+            "pokemon_type": "fighting",
+            "cost": [
+                {
+                    "energy_type": "fighting",
+                    "amount": 1
+                }
+            ],
+            "number_of_targets": 1,
+            "damage": 15
+        },
+        {
+            "id": 1,
+            "ability_sub_type": "self_status",
+            "name": "Bulk Up",
+            "description": "Increases defence and special defence by 1 and max hp by 5.",
+            "pokemon_type": "normal",
+            "cost": [
+                {
+                    "energy_type": "basic",
+                    "amount": 1
+                }
+            ],
+            "stat_modifications": [
+                {
+                    "stat": "defence",
+                    "amount": 1
+                },
+                {
+                    "stat": "special_defence",
+                    "amount": 1
+                },
+                {
+                    "stat": "max_hp",
+                    "amount": 5
+                }
+            ]
+        }
+    ],
+    "weakness": [
+        {
+            "pokemon_type": "flying",
+            "amount": 10
+        },
+        {
+            "pokemon_type": "psychic",
+            "amount": 10
+        },
+        {
+            "pokemon_type": "fairy",
+            "amount": 10
+        }
+    ]
+}
