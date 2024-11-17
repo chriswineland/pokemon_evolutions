@@ -1,0 +1,59 @@
+{
+    "id": 67,
+    "name": "Machoke",
+    "evolved_from_id": 66,
+    "current_hp": 50,
+    "max_hp": 50,
+    "defence": 1,
+    "special_defence": 1,
+    "ability_slots": 3,
+    "ability_upgrades":[
+        {
+            "id": 0,
+            "ability_sub_type": "direct_damage",
+            "name": "Karate Chop II",
+            "description": "Deals 30 physical damage of type fighting to the targeted Pokemon.",
+            "damage": 30
+        },
+        {
+            "id": 1,
+            "ability_sub_type": "self_status",
+            "description": "Increases defence and special defence by 2 and max hp by 10.",
+            "stat_modifications": [
+                {
+                    "stat": "defence",
+                    "amount": 2
+                },
+                {
+                    "stat": "special_defence",
+                    "amount": 2
+                },
+                {
+                    "stat": "max_hp",
+                    "amount": 10
+                }
+            ]
+        }
+    ],
+    "new_abilities": [
+        {
+            "id": 2,
+            "ability_sub_type": "direct_damage",
+            "name": "Seismic Toss",
+            "description": "Deals 45 physical damage of type fighting to the targeted Pokemon.",
+            "pokemon_type": "fighting",
+            "cost": [
+                {
+                    "energy_type": "fighting",
+                    "amount": 2
+                },
+                {
+                    "energy_type": "basic",
+                    "amount": 1
+                }
+            ],
+            "number_of_targets": 1,
+            "damage": 45
+        }
+    ]
+}

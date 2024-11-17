@@ -3,22 +3,24 @@ from domain.helper_scripts.evolve_pokemon_with_data import evolve_pokemon_with_d
 import json
 
 
-def print_json_data(json_data: json):
-    print(json.dumps(json_data, indent=2))
-
-
 machop_data: json
-with open("json/base_pokemon/machop.json") as json_file:
+with open("json/base_pokemon_data/machop.json") as json_file:
     machop_data = json.load(json_file)
-print("machop data:")
-print_json_data(machop_data)
-pokemon: Pokemon = Pokemon(json_data=machop_data)
-print(pokemon.name)
+pokemon_1: Pokemon = Pokemon(json_data=machop_data)
 
 machoke_evolution_data: json
-with open("json/evolved_pokemon/machoke.json") as json_file:
+with open("json/evolution_data/machoke.json") as json_file:
     machoke_evolution_data = json.load(json_file)
-print("machoke evolution data:")
-print_json_data(machoke_evolution_data)
-evolve_pokemon_with_data(pokemon, machoke_evolution_data)
-print(pokemon.name)
+evolve_pokemon_with_data(pokemon_1, machoke_evolution_data)
+
+machamp_evolution_data: json
+with open("json/evolution_data/machamp.json") as json_file:
+    machamp_evolution_data = json.load(json_file)
+evolve_pokemon_with_data(pokemon_1, machamp_evolution_data)
+
+bellsprout_data: json
+with open("json/base_pokemon_data/bellsprout.json") as json_file:
+    bellsprout_data = json.load(json_file)
+pokemon_2: Pokemon = Pokemon(json_data=bellsprout_data)
+
+print()
