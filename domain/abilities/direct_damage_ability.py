@@ -1,3 +1,4 @@
+from __future__ import annotations
 import json
 from domain.abilities.ability import Ability
 from domain.helper_scripts.safe_get import safe_get
@@ -25,4 +26,10 @@ class DirectDamageAbility(Ability):
 
     def populate_with_ability_data(self, ability_data: Ability):
         super().populate_with_ability_data(ability_data)
-        pass
+    
+    def update_ability_with_values(self, update_ability: DirectDamageAbility):
+        super().update_ability_with_values(update_ability)
+        if update_ability.number_of_targets is not None:
+            self.number_of_targets = update_ability.number_of_targets
+        if update_ability.damage is not None:
+            self.damage = update_ability.damage

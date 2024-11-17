@@ -29,8 +29,18 @@ class Ability:
         self.id = safe_get(json_data, self.ID_KEY)
         self.name = safe_get(json_data, self.NAME_KEY)
         self.description = safe_get(json_data, self.DESCRIPTION_KEY)
-        self.type = PokemonType.parce_from_json(json_data)
+        self.type = PokemonType.create_from_value(safe_get(json_data, PokemonType.json_key()))
         self.cost = EnergyPool(json_data=safe_get(json_data, self.COST_KEY))
 
     def populate_with_ability_data(self, ability_data: Ability):
         pass
+
+    def update_ability_with_values(self, update_ability: Ability):
+        if update_ability.name is not None:
+            self.name = update_ability.name
+        if update_ability.description is not None:
+            self.description = update_ability.description
+        if update_ability.type is not None:
+            self.type = update_ability.type
+        if update_ability.cost is not None:
+            self.cost = update_ability.cost

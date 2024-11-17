@@ -1,4 +1,5 @@
 from domain.pokemon import Pokemon
+from domain.helper_scripts.evolve_pokemon_with_data import evolve_pokemon_with_data
 import json
 
 
@@ -19,5 +20,5 @@ with open("json/evolved_pokemon/machoke.json") as json_file:
     machoke_evolution_data = json.load(json_file)
 print("machoke evolution data:")
 print_json_data(machoke_evolution_data)
-pokemon.evolve(machoke_evolution_data)
+evolve_pokemon_with_data(pokemon, machoke_evolution_data)
 print(pokemon.name)

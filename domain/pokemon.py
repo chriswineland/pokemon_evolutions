@@ -35,7 +35,6 @@ class Pokemon(Delegator, PokemonStatModificationProtocol):
     #JSON Keys
     ID_KEY: str = "id"
     NAME_KEY: str = "name"
-    TYPE_KEY: str = "type"
     MAX_HP_KEY: str = "max_hp"
     DEFENCE_KEY: str = "defence"
     SPECIAL_DEFENCE_KEY: str = "special_defence"
@@ -64,6 +63,8 @@ class Pokemon(Delegator, PokemonStatModificationProtocol):
             parced_ability = create_ability_from_json(ability_data)
             if parced_ability is not None:
                 self.posible_abilities.append(parced_ability)
+        #for this mock project all posible abilities are active
+        self.active_abilities = self.posible_abilities.copy()
         self.weakness = Weakness(json_data=safe_get(json_data, self.WEAKNESS_KEY))
         self.energy_pool = EnergyPool()
             

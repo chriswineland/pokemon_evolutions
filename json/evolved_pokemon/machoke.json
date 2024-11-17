@@ -6,17 +6,18 @@
     "max_hp": 50,
     "defence": 1,
     "special_defence": 1,
-    "ability_slots": 1,
+    "ability_slots": 3,
     "ability_upgrades":[
         {
             "id": 0,
+            "ability_sub_type": "direct_damage",
             "name": "Karate Chop II",
             "description": "Deals 30 physical damage of type fighting to the targeted Pokemon.",
             "damage": 30
         },
         {
             "id": 1,
-            "name": "Bulk Up II",
+            "ability_sub_type": "self_status",
             "description": "Increases defence and special defence by 2 and max hp by 10.",
             "stat_modifications": [
                 {
