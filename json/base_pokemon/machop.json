@@ -2,12 +2,9 @@
     "id": 66,
     "name": "machop",
     "pokemon_type": "fighting",
-    "exp_to_level": 100,
     "max_hp": 70,
     "defence": 2,
     "special_defence": 2,
-    "evolves_to_id": 67,
-    "evolved_from_id": null,
     "ability_slots": 2,
     "new_abilities": [
         {

@@ -1,9 +1,7 @@
 {
     "id": 67,
     "name": "machoke",
-    "evolves_to_id": 68,
     "evolved_from_id": 66,
-    "exp_to_level": 50,
     "current_hp": 50,
     "max_hp": 50,
     "defence": 1,

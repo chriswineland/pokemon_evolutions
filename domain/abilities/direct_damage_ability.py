@@ -1,5 +1,6 @@
 import json
 from domain.abilities.ability import Ability
+from domain.helper_scripts.safe_get import safe_get
 
 
 class DirectDamageAbility(Ability):
@@ -19,8 +20,8 @@ class DirectDamageAbility(Ability):
 
     def populate_with_json_data(self, json_data: json):
         super().populate_with_json_data(json_data)
-        self.number_of_targets = json_data[self.NUMBER_OF_TARGETS_KEY]
-        self.damage = json_data[self.DAMAGE_KEY]
+        self.number_of_targets = safe_get(json_data, self.NUMBER_OF_TARGETS_KEY)
+        self.damage = safe_get(json_data, self.DAMAGE_KEY)
 
     def populate_with_ability_data(self, ability_data: Ability):
         super().populate_with_ability_data(ability_data)

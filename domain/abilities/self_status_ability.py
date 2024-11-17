@@ -1,10 +1,15 @@
 import json
 from domain.abilities.ability import Ability
+from domain.helper_scripts.safe_get import safe_get
 
 
 class SelfStatusAbility(Ability):
-    
+    stat_modifications: list
+    condition_modifications: list
+
     #JSON Keys
+    STAT_MODIFICATIONS_KEY: str = "stat_modifications"
+    CONDITION_MODIFICATION_KEY: str = "condition_modifications"
 
     def __init__(self, json_data: json = None, ability_data: Ability = None):
         super().__init__(json_data=json_data, ability_data=ability_data)

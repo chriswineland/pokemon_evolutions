@@ -1,6 +1,7 @@
 from __future__ import annotations
 from domain.pokemon_types import PokemonType
 from domain.energy_pool import EnergyPool
+from domain.helper_scripts.safe_get import safe_get
 import json
 
 
@@ -25,11 +26,11 @@ class Ability:
             self.populate_with_ability_data(ability_data)
 
     def populate_with_json_data(self, json_data: json):
-        self.id = json_data[self.ID_KEY]
-        self.name = json_data[self.NAME_KEY]
-        self.description = json_data[self.DESCRIPTION_KEY]
+        self.id = safe_get(json_data, self.ID_KEY)
+        self.name = safe_get(json_data, self.NAME_KEY)
+        self.description = safe_get(json_data, self.DESCRIPTION_KEY)
         self.type = PokemonType.parce_from_json(json_data)
-        self.cost = EnergyPool(json_data=json_data[self.COST_KEY])
+        self.cost = EnergyPool(json_data=safe_get(json_data, self.COST_KEY))
 
     def populate_with_ability_data(self, ability_data: Ability):
         pass
