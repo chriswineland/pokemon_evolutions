@@ -4,6 +4,7 @@ from domain.pokemon_types import PokemonType
 from domain.pokemon import Pokemon
 from domain.abilities.ability import Ability
 from domain.abilities.ability_factory import create_ability_from_json
+from domain.game_log import GameLog
 
 
 #validity keys
@@ -22,6 +23,7 @@ def evolve_pokemon_with_data(pokemon: Pokemon, data: json) -> bool:
     __update_evolution_values(pokemon, data)
     __upgrade_active_abilities(pokemon, data)
     __add_new_abilities(pokemon, data)
+    GameLog.get_instance().log_evolution_event(pokemon)
     return True
 
 def  __is_valid_evolution(pokemon: Pokemon, data: json) -> bool:

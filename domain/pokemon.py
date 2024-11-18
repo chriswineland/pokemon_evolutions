@@ -11,6 +11,7 @@ from domain.pokemon_condition import PokemonCondition
 from domain.pokemon_stat_modification import PokemonStatModification
 from domain.pokemon_modifiable_stat import PokemonModifiableStat
 from domain.weakness import Weakness
+from domain.game_log import GameLog
 import json
 
 class Pokemon(Delegator, PokemonStatModificationProtocol):
@@ -47,6 +48,7 @@ class Pokemon(Delegator, PokemonStatModificationProtocol):
             self.populate_with_json_data(json_data)
         elif pokemon_data is not None:
             self.populate_with_pokemon_data(pokemon_data)
+        GameLog.get_instance().log_pokemon_creation(self)
 
     def populate_with_json_data(self, json_data: json):
         self.id = safe_get(json_data, self.ID_KEY)
