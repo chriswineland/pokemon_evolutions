@@ -59,6 +59,7 @@ class Pokemon(Delegator, PokemonStatModificationProtocol):
         self.shield = 0
         self.defense = safe_get(json_data, self.DEFENSE_KEY)
         self.special_defense = safe_get(json_data, self.SPECIAL_DEFENSE_KEY)
+        self.attack_modifier = 0
         self.ability_slots = safe_get(json_data, self.ABILITY_SLOTS_KEY)
         self.posible_abilities = []
         for ability_data in safe_get(json_data, self.POSIBLE_ABILITIES_KEY):
@@ -72,6 +73,12 @@ class Pokemon(Delegator, PokemonStatModificationProtocol):
             
     def populate_with_pokemon_data(self, pokemon_data: Pokemon):
         pass
+
+    def get_ability_by_id(self, ability_id: int) -> Ability | None:
+        for ability in self.active_abilities:
+            if ability.id == ability_id:
+                return ability
+        return None
 
     #PokemonStatModificationProtocol
     def pokemonStatModificationDidChange(self, stat: PokemonModifiableStat, amount: int):
