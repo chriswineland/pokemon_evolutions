@@ -24,9 +24,10 @@
     If this was going to be a game, there would be a game engine insted of a hard coded main function
     <br><br>
     The bulk of the work is in the fallowing classes / scripts:
-    - domain/pokemon.py
-    - domain/helper_sripts/evolve_pokemon_with_data.py
-    - domain/helper_sripts/execute_ability.py
+    <li>domain/pokemon.py</li>
+    <li>domain/helper_sripts/evolve_pokemon_with_data.py</li>
+    <li>domain/helper_sripts/execute_ability.py</li>
+    <li>domain/helper_scripts/deal_damage.py</li>
     <br><br>
     There are some half emplamented ideas here and there but the stated goals should all be there
 </p>
