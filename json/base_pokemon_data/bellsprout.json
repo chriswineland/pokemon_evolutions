@@ -3,15 +3,16 @@
     "name": "Bellsprout",
     "pokemon_type": "grass",
     "max_hp": 60,
-    "defence": 1,
-    "special_defence": 1,
+    "defense": 1,
+    "special_defense": 1,
     "ability_slots": 1,
     "new_abilities": [
         {
             "id": 0,
             "ability_sub_type": "direct_damage",
             "name": "Bullet Seed",
-            "description": "Deals 10 physical damage of type grass to the targeted Pokemon.",
+            "pokemon_damage_type": "special",
+            "description": "Deals 10 special damage of type grass to the targeted Pokemon.",
             "pokemon_type": "grass",
             "cost": [
                 {

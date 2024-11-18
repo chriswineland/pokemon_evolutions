@@ -22,8 +22,8 @@ class Pokemon(Delegator, PokemonStatModificationProtocol):
     max_hp: int
     current_hp: int
     shield: int
-    defence: int
-    special_defence: int
+    defense: int
+    special_defense: int
     attack_modifier: int
     posible_abilities: list[Ability]
     active_abilities: list[Ability]
@@ -37,8 +37,8 @@ class Pokemon(Delegator, PokemonStatModificationProtocol):
     ID_KEY: str = "id"
     NAME_KEY: str = "name"
     MAX_HP_KEY: str = "max_hp"
-    DEFENCE_KEY: str = "defence"
-    SPECIAL_DEFENCE_KEY: str = "special_defence"
+    DEFENSE_KEY: str = "defense"
+    SPECIAL_DEFENSE_KEY: str = "special_defense"
     POSIBLE_ABILITIES_KEY: str = "new_abilities"
     ABILITY_SLOTS_KEY: str = "ability_slots"
     WEAKNESS_KEY: str = "weakness"
@@ -57,8 +57,8 @@ class Pokemon(Delegator, PokemonStatModificationProtocol):
         self.max_hp = safe_get(json_data, self.MAX_HP_KEY)
         self.current_hp = self.max_hp
         self.shield = 0
-        self.defence = safe_get(json_data, self.DEFENCE_KEY)
-        self.special_defence = safe_get(json_data, self.SPECIAL_DEFENCE_KEY)
+        self.defense = safe_get(json_data, self.DEFENSE_KEY)
+        self.special_defense = safe_get(json_data, self.SPECIAL_DEFENSE_KEY)
         self.ability_slots = safe_get(json_data, self.ABILITY_SLOTS_KEY)
         self.posible_abilities = []
         for ability_data in safe_get(json_data, self.POSIBLE_ABILITIES_KEY):
@@ -81,9 +81,9 @@ class Pokemon(Delegator, PokemonStatModificationProtocol):
                 self.max_hp += amount
                 #make sure current hp is at or below new threshold
                 self.current_hp = min(self.max_hp, self.current_hp)
-            case PokemonModifiableStat.DEFENCE:
-                self.defence += amount
-            case PokemonModifiableStat.SPECIAL_DEFENCE:
-                self.special_defence += amount
+            case PokemonModifiableStat.DEFENSE:
+                self.defense += amount
+            case PokemonModifiableStat.SPECIAL_DEFENSE:
+                self.special_defense += amount
             case PokemonModifiableStat.ATTACK_MODIFIER:
                 self.attack_modifier += amount

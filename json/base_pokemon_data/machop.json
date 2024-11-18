@@ -3,14 +3,15 @@
     "name": "Machop",
     "pokemon_type": "fighting",
     "max_hp": 70,
-    "defence": 2,
-    "special_defence": 2,
+    "defense": 2,
+    "special_defense": 2,
     "ability_slots": 2,
     "new_abilities": [
         {
             "id": 0,
             "ability_sub_type": "direct_damage",
             "name": "Karate Chop",
+            "pokemon_damage_type": "physical",
             "description": "Deals 15 physical damage of type fighting to the targeted Pokemon.",
             "pokemon_type": "fighting",
             "cost": [
@@ -26,7 +27,7 @@
             "id": 1,
             "ability_sub_type": "self_status",
             "name": "Bulk Up",
-            "description": "Increases defence and special defence by 1 and max hp by 5.",
+            "description": "Increases defense and special defense by 1 and max hp by 5.",
             "pokemon_type": "normal",
             "cost": [
                 {
@@ -36,11 +37,11 @@
             ],
             "stat_modifications": [
                 {
-                    "stat": "defence",
+                    "stat": "defense",
                     "amount": 1
                 },
                 {
-                    "stat": "special_defence",
+                    "stat": "special_defense",
                     "amount": 1
                 },
                 {

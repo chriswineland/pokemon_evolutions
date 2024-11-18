@@ -47,10 +47,10 @@ def __update_evolution_values(pokemon: Pokemon, data: json):
     if safe_get(data, __SHIELD_KEY) is not None:
         pokemon.shield += data[__SHIELD_KEY]
     pokemon.shield = max(0, pokemon.shield)
-    if safe_get(data, pokemon.DEFENCE_KEY) is not None:
-        pokemon.defence += data[pokemon.DEFENCE_KEY]
-    if safe_get(data, pokemon.SPECIAL_DEFENCE_KEY) is not None:
-        pokemon.special_defence += data[pokemon.SPECIAL_DEFENCE_KEY]
+    if safe_get(data, pokemon.DEFENSE_KEY) is not None:
+        pokemon.defense += data[pokemon.DEFENSE_KEY]
+    if safe_get(data, pokemon.SPECIAL_DEFENSE_KEY) is not None:
+        pokemon.special_defense += data[pokemon.SPECIAL_DEFENSE_KEY]
 
 def __upgrade_active_abilities(pokemon: Pokemon, data: json):
     #get a list of upgraded ability information

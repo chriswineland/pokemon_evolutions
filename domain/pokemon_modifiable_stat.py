@@ -3,8 +3,8 @@ from enum import Enum
 
 class PokemonModifiableStat(str, Enum):
     MAX_HP = "max_hp"
-    DEFENCE = "defence"
-    SPECIAL_DEFENCE = "special_defence"
+    DEFENSE = "defense"
+    SPECIAL_DEFENSE = "special_defense"
     ATTACK_MODIFIER = "attack_modifier"
 
     @staticmethod
@@ -12,10 +12,10 @@ class PokemonModifiableStat(str, Enum):
         match value:
             case PokemonModifiableStat.MAX_HP.value:
                 return PokemonModifiableStat.MAX_HP
-            case PokemonModifiableStat.DEFENCE.value:
-                return PokemonModifiableStat.DEFENCE
-            case PokemonModifiableStat.SPECIAL_DEFENCE.value:
-                return PokemonModifiableStat.SPECIAL_DEFENCE
+            case PokemonModifiableStat.DEFENSE.value:
+                return PokemonModifiableStat.DEFENSE
+            case PokemonModifiableStat.SPECIAL_DEFENSE.value:
+                return PokemonModifiableStat.SPECIAL_DEFENSE
             case PokemonModifiableStat.ATTACK_MODIFIER.value:
                 return PokemonModifiableStat.ATTACK_MODIFIER
             case _:
