@@ -1,6 +1,6 @@
 from __future__ import annotations
-from domain.pokemon_types import PokemonType
 import json
+from Client.domain.pokemon_types import PokemonType
 
 
 class WeaknessElement:

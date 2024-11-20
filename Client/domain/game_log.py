@@ -1,5 +1,5 @@
 from __future__ import annotations
-from domain.pokemon_types import PokemonType
+from Client.domain.pokemon_types import PokemonType
 
 
 class GameLog:

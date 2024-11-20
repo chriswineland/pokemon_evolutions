@@ -1,8 +1,8 @@
 from __future__ import annotations
 import json
-from domain.abilities.ability import Ability
-from domain.pokemon_damage_type import PokemonDamageType
-from domain.helper_scripts.safe_get import safe_get
+from Client.domain.abilities.ability import Ability
+from Client.domain.pokemon_damage_type import PokemonDamageType
+from Client.domain.helper_scripts.safe_get import safe_get
 
 
 class DirectDamageAbility(Ability):

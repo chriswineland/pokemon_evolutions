@@ -1,6 +1,6 @@
 from __future__ import annotations
 import json
-from domain.energy import Energy
+from Client.domain.energy import Energy
 
 
 class EnergyPoolElement:

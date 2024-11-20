@@ -1,8 +1,8 @@
-from domain.pokemon_damage_type import PokemonDamageType
-from domain.pokemon_types import PokemonType
-from domain.weakness import WeaknessElement
-from domain.pokemon import Pokemon
-from domain.game_log import GameLog
+from Client.domain.pokemon_damage_type import PokemonDamageType
+from Client.domain.pokemon_types import PokemonType
+from Client.domain.weakness import WeaknessElement
+from Client.domain.pokemon import Pokemon
+from Client.domain.game_log import GameLog
 
 
 def deal_damage(amount: int, damage_type: PokemonDamageType, ability_type: PokemonType, targets: list[Pokemon]):

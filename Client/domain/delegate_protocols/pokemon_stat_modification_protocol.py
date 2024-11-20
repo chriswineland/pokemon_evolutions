@@ -1,4 +1,4 @@
-from domain.pokemon_modifiable_stat import PokemonModifiableStat
+from Client.domain.pokemon_modifiable_stat import PokemonModifiableStat
 
 
 class PokemonStatModificationProtocol():

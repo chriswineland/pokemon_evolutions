@@ -1,10 +1,10 @@
 import json
-from domain.helper_scripts.safe_get import safe_get
-from domain.pokemon_types import PokemonType
-from domain.pokemon import Pokemon
-from domain.abilities.ability import Ability
-from domain.abilities.ability_factory import create_ability_from_json
-from domain.game_log import GameLog
+from Client.domain.helper_scripts.safe_get import safe_get
+from Client.domain.pokemon_types import PokemonType
+from Client.domain.pokemon import Pokemon
+from Client.domain.abilities.ability import Ability
+from Client.domain.abilities.ability_factory import create_ability_from_json
+from Client.domain.game_log import GameLog
 
 
 #validity keys

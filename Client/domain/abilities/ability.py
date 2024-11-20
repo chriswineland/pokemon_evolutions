@@ -1,7 +1,7 @@
 from __future__ import annotations
-from domain.pokemon_types import PokemonType
-from domain.energy_pool import EnergyPool
-from domain.helper_scripts.safe_get import safe_get
+from Client.domain.pokemon_types import PokemonType
+from Client.domain.energy_pool import EnergyPool
+from Client.domain.helper_scripts.safe_get import safe_get
 import json
 
 

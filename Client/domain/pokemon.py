@@ -1,17 +1,17 @@
 from __future__ import annotations
-from domain.helper_scripts.safe_get import safe_get
-from domain.abilities.ability import Ability
-from domain.abilities.ability_factory import create_ability_from_json
-from domain.energy_pool import EnergyPool
-from domain.pokemon_types import PokemonType
-from domain.delegate_protocols.delegator import Delegator
-from domain.delegate_protocols.pokemon_status_protocol import PokemonStatusProtocol
-from domain.delegate_protocols.pokemon_stat_modification_protocol import PokemonStatModificationProtocol
-from domain.pokemon_condition import PokemonCondition
-from domain.pokemon_stat_modification import PokemonStatModification
-from domain.pokemon_modifiable_stat import PokemonModifiableStat
-from domain.weakness import Weakness
-from domain.game_log import GameLog
+from Client.domain.helper_scripts.safe_get import safe_get
+from Client.domain.abilities.ability import Ability
+from Client.domain.abilities.ability_factory import create_ability_from_json
+from Client.domain.energy_pool import EnergyPool
+from Client.domain.pokemon_types import PokemonType
+from Client.domain.delegate_protocols.delegator import Delegator
+from Client.domain.delegate_protocols.pokemon_status_protocol import PokemonStatusProtocol
+from Client.domain.delegate_protocols.pokemon_stat_modification_protocol import PokemonStatModificationProtocol
+from Client.domain.pokemon_condition import PokemonCondition
+from Client.domain.pokemon_stat_modification import PokemonStatModification
+from Client.domain.pokemon_modifiable_stat import PokemonModifiableStat
+from Client.domain.weakness import Weakness
+from Client.domain.game_log import GameLog
 import json
 
 class Pokemon(Delegator, PokemonStatModificationProtocol):

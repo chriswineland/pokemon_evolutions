@@ -1,9 +1,9 @@
 from __future__ import annotations
 import json
 from enum import Enum
-from domain.abilities.ability import Ability
-from domain.abilities.direct_damage_ability import DirectDamageAbility
-from domain.abilities.self_status_ability import SelfStatusAbility
+from Client.domain.abilities.ability import Ability
+from Client.domain.abilities.direct_damage_ability import DirectDamageAbility
+from Client.domain.abilities.self_status_ability import SelfStatusAbility
 
 
 class AbilitySubTypes(str, Enum):

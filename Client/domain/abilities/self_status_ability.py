@@ -1,6 +1,6 @@
 import json
-from domain.abilities.ability import Ability
-from domain.helper_scripts.safe_get import safe_get
+from Client.domain.abilities.ability import Ability
+from Client.domain.helper_scripts.safe_get import safe_get
 
 
 class SelfStatusAbility(Ability):
